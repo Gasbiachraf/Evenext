@@ -16,14 +16,11 @@ return new class extends Migration
             $table->string("title");
             $table->foreignId("organizer_id");
             $table->string("description");
-            $table->date("date_start");
-            $table->time("time_start");
-            $table->date("date_end");
-            $table->time("time_end");
+            $table->dateTime("date_start");
+            $table->dateTime("date_end");
             $table->string("location");
             $table->integer("price");
             $table->string("image");
-            $table->string("ticket_price");
             $table->timestamps();
         });
     }

@@ -14,13 +14,10 @@ class Events extends Model
         "organizer_id",
         "description",
         "date_start",
-        "time_start",
         "date_end",
-        "time_end",
         "location",
         "price",
         "image",
-        "ticket_price",
     ];
 
 
