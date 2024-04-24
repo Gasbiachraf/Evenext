@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -6,8 +6,17 @@
 
         <title>PFL Achraf gasbi</title>
 
+
+
+
     </head>
     <body >
         
     </body>
-</html>
+</html> --}}
+
+@extends('layouts.index')
+@section('content')
+    
+@endsection
+
