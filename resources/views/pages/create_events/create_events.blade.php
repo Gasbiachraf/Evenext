@@ -22,7 +22,7 @@
                         @foreach ($events as $event)
                             @if ($event->user_id == Auth::user()->id)
                                 <tr class=" border-t-2">
-                                    <td>{{ $event->id }}</td>
+                                    <td>{{ $numberEvent++ }}</td>
                                     <td>{{ $event->title }}</td>
                                     <td>{{ $event->location }}</td>
                                     <td>{{ $event->price }} MAD</td>
@@ -35,9 +35,6 @@
                     </tbody>
                 </table>
             </div>
-
-
-
         </div>
 
 

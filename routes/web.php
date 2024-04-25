@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CreateEventsController;
 use App\Http\Controllers\EditUsersController;
+use App\Http\Controllers\EventAdminController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit/users', [EditUsersController::class, 'index'])->name('users.index');
     Route::put('/user/update/{user}', [EditUsersController::class, 'update'])->name('user.update');
     Route::delete('/user/delete/{user}', [EditUsersController::class, 'destroy'])->name('user.delete');
+    // ^^ Edit_events_admin page :
+    Route::get('/events/admin', [EventAdminController::class, 'index'])->name('event_admin.index');
+
 
 
 
