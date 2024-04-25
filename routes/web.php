@@ -6,6 +6,7 @@ use App\Http\Controllers\EventAdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StripeController;
+use App\Http\Controllers\TicketsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -39,8 +40,14 @@ Route::middleware('auth')->group(function () {
     // ^^ Edit_events_admin page :
     Route::get('/events/admin', [EventAdminController::class, 'index'])->name('event_admin.index');
     // ^^ Stripe page :
-    Route::get('/session' , [StripeController::class , "session"]);
-    Route::get('/success' , [StripeController::class , "success"])->name('success');
+    // Route::get('/session' , [StripeController::class , "session"]);
+    // ^^ Ticket page :
+    Route::get('/home/ticket/{event}', [TicketsController::class, 'show'])->name('ticket.show');
+    Route::post('/home/ticket/post', [TicketsController::class, 'store'])->name('ticket.post');
+    Route::get('/success' , [TicketsController::class , "success"])->name('success');
+
+
+
 
 
 

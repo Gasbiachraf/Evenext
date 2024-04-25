@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Events;
 use App\Models\Tickets;
 use Illuminate\Http\Request;
+use Stripe\Checkout\Session;
+use Stripe\Stripe;
 
 class TicketsController extends Controller
 {
@@ -12,7 +15,7 @@ class TicketsController extends Controller
      */
     public function index()
     {
-        //
+        // return view("pages.tickets.ticket");
     }
 
     /**
@@ -28,15 +31,63 @@ class TicketsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $userId = auth()->user()->id ;
+        request()->validate([
+            "price"=>"required",
+            "quantity"=>"required",
+            "eventId"=>"required",
+        ]);
+        Tickets::create([   
+            "user_id"=>$userId,
+            "event_id"=>$request->eventId,
+            "price"=>$request->price,
+            "ticket_type"=>"normal",
+            "quantity"=>$request->quantity,
+            "pdf"=>"walo",
+
+        ]);
+
+        $event = Events::where('id' , $request->eventId)->first();
+        
+
+
+        Stripe::setApiKey(config('stripe.sk'));
+        
+        $session = Session::create([
+            'line_items'  => [
+                [
+                    'price_data' => [
+                        'currency'     => 'usd',
+                        'product_data' => [
+                            "name" => "$event->title",
+                            "description"=> "$event->description"
+                        ],
+                        'unit_amount'  =>  $request->price*$request->quantity*100,
+                    ],
+                    'quantity'   => 1,
+                ],
+
+            ],
+            'mode'        => 'payment', // the mode  of payment
+            'success_url' => route('success'), // route when success 
+            'cancel_url'  => route('home'), // route when  failed or canceled
+        ]);
+
+        return redirect()->away($session->url);
+
+        // return back();
+
+    }
+    public function success(){
+        return back();
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Tickets $tickets)
+    public function show(Events $event)
     {
-        //
+        return view("pages.tickets.ticket", compact("event"));
     }
 
     /**

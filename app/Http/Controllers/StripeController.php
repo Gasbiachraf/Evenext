@@ -26,7 +26,7 @@ class StripeController extends Controller
                         ],
                         'unit_amount'  => 6900,
                     ],
-                    'quantity'   => 2,
+                    'quantity'   => 1,
                 ],
 
             ],
@@ -37,7 +37,5 @@ class StripeController extends Controller
 
         return redirect()->away($session->url);
     }
-    public function success(){
-        return back();
-    }
+
 }

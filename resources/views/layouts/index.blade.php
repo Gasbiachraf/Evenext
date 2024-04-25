@@ -14,11 +14,15 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="">
 
     @include('layouts.navigation')
 
     @yield('content')
+
+    <div class="pt-10">
+        @include('layouts.components.footer')
+    </div>
 
 </body>
 
