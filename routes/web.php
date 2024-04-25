@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CreateEventsController;
+use App\Http\Controllers\EditUsersController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,13 @@ Route::middleware('auth')->group(function () {
     Route::put('/event/update/{event}', [CreateEventsController::class, 'update'])->name('event.update');
     Route::delete('/event/delete/{event}', [CreateEventsController::class, 'destroy'])->name('event.delete');
     Route::get('/calendar/events', [CreateEventsController::class , "show"]);
+    // ^^ Edit_users page :
+    Route::get('/edit/users', [EditUsersController::class, 'index'])->name('users.index');
+    Route::put('/user/update/{user}', [EditUsersController::class, 'update'])->name('user.update');
+    Route::delete('/user/delete/{user}', [EditUsersController::class, 'destroy'])->name('user.delete');
+
+
+
 
 });
 

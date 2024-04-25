@@ -4,12 +4,12 @@
 
         @include('pages.create_events.components.calendar_modal')
         <div class="p-4"> @include('pages.create_events.components.sidebare')</div>
+
+
         <div class="flex justify-center w-full ">
-
-
-            <div class="w-[70%]  pt-2  shadow-xl border-2 rounded-xl overflow-auto max-h-[70vh]">
-                <table class="w-full table-fixed text-center" >
-                    <thead class="border-b-2 ">
+            <div class="w-[70%]  pt-2  shadow-xl border-2 rounded-xl max-h-[70vh] overflow-auto ">
+                <table class="w-full table-fixed text-center  " >
+                    <thead class="border-b-2  ">
                         <th>#</th>
                         <th>Title</th>
                         <th>Location</th>
@@ -18,7 +18,7 @@
                         <th>Update</th>
                         <th>Delete</th>
                     </thead>
-                    <tbody class="">
+                    <tbody >
                         @foreach ($events as $event)
                             @if ($event->user_id == Auth::user()->id)
                                 <tr class=" border-t-2">
