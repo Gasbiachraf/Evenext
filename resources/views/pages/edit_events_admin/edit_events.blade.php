@@ -1,8 +1,8 @@
 @extends('layouts.index')
 @section('content')
 
-<div class="flex justify-center w-full ">
-    <div class="w-[70%]  pt-2  shadow-xl border-2 rounded-xl max-h-[70vh] overflow-auto ">
+<div class="flex justify-center w-full  mt-10">
+    <div class="w-[70%]  pt-2  shadow-xl border-2 rounded-xl max-h-[70vh] overflow-auto p-2">
         <table class="w-full table-fixed text-center  " >
             <thead class="border-b-2  ">
                 <th>#</th>

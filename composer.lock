@@ -4,8 +4,66 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0eb84b8ba8ba444fbd0b6e3669a50f2a",
+    "content-hash": "c1e22b5ed8b68689e497d4afe84b8eae",
     "packages": [
+        {
+            "name": "attrixtech/laravel-icons",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/attrixtech/laravel-icons.git",
+                "reference": "62d150cea04be9766baa41819815702e012d56a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/attrixtech/laravel-icons/zipball/62d150cea04be9766baa41819815702e012d56a6",
+                "reference": "62d150cea04be9766baa41819815702e012d56a6",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Attrixtech\\LaravelIcons\\LaravelIconsServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaravelIcons": "Attrixtech\\LaravelIcons\\Facades\\LaravelIcons"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Attrixtech\\LaravelIcons\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vijay Goswami",
+                    "email": "vijaygoswami@attrixtech.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel Icons is a easy to use SVG icons package that you will ever need in your laravel project.",
+            "homepage": "https://github.com/attrixtech/laravel-icons",
+            "keywords": [
+                "attrixtech",
+                "icons package",
+                "laravel-icons",
+                "svg icons"
+            ],
+            "support": {
+                "issues": "https://github.com/attrixtech/laravel-icons/issues",
+                "source": "https://github.com/attrixtech/laravel-icons/tree/1.2"
+            },
+            "time": "2023-06-27T20:44:04+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.11.0",
@@ -3180,6 +3238,65 @@
                 }
             ],
             "time": "2023-11-08T05:53:05+00:00"
+        },
+        {
+            "name": "stripe/stripe-php",
+            "version": "v14.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "4825e7f03f9f83e091928c8f08f96bc87fdd2c7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/4825e7f03f9f83e091928c8f08f96bc87fdd2c7d",
+                "reference": "4825e7f03f9f83e091928c8f08f96bc87fdd2c7d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "3.5.0",
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^5.7 || ^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "support": {
+                "issues": "https://github.com/stripe/stripe-php/issues",
+                "source": "https://github.com/stripe/stripe-php/tree/v14.3.0"
+            },
+            "time": "2024-04-18T21:25:27+00:00"
         },
         {
             "name": "symfony/clock",
