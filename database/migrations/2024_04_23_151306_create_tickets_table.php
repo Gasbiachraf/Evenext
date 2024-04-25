@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("user_id")->constrained()->cascadeOnDelete()->cascadeOnUpdate();;
-            $table->foreignId("event_id")->constrained()->cascadeOnDelete()->cascadeOnUpdate();;
+            // $table->foreignId("user_id")->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            // $table->foreignId("event_id")->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->string("ticket_type");
             $table->integer("price");
             $table->integer("quantity");

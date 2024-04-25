@@ -11,7 +11,7 @@ class Events extends Model
 
     protected $fillable = [
         "title",
-        "organizer_id",
+        "user_id",
         "description",
         "date_start",
         "date_end",
@@ -23,10 +23,10 @@ class Events extends Model
 
 
 
-    public function users(){
-        return $this->belongsToMany(User::class , "events_users");
+    public function user(){
+        return $this->belongsTo(User::class);
     }
-    public function tickets(){
-        return $this->hasMany(Tickets::class);
-    }
+    // public function tickets(){
+    //     return $this->hasMany(Tickets::class);
+    // }
 }

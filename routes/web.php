@@ -22,6 +22,9 @@ Route::middleware('auth')->group(function () {
     // ^^ Create events page :
     Route::get('/event', [CreateEventsController::class, 'index'])->name('event.index');
     Route::post('/event/create', [CreateEventsController::class, 'store'])->name('event.post');
+    Route::put('/event/update/{event}', [CreateEventsController::class, 'update'])->name('event.update');
+    Route::delete('/event/delete/{event}', [CreateEventsController::class, 'destroy'])->name('event.delete');
+    Route::get('/calendar/events', [CreateEventsController::class , "show"]);
 
 });
 

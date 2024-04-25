@@ -1,20 +1,57 @@
 @extends('layouts.index')
 @section('content')
-    <div class=" flex ">
-
-        
-
-        {{-- @vite(['resources/js/app.js'])
-        @vite('resources/css/app.css') --}}
-
-
+    <div class=" flex flex-col ">
 
         @include('pages.create_events.components.calendar_modal')
-        <div class="p-4">  @include('pages.create_events.components.sidebare')</div>
+        <div class="p-4"> @include('pages.create_events.components.sidebare')</div>
+        <div class="flex justify-center w-full ">
+
+
+            <div class="w-[70%]  pt-2  shadow-xl border-2 rounded-xl overflow-auto max-h-[70vh]">
+                <table class="w-full table-fixed text-center" >
+                    <thead class="border-b-2 ">
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Location</th>
+                        <th>Price</th>
+                        <th>Date</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody class="">
+                        @foreach ($events as $event)
+                            @if ($event->user_id == Auth::user()->id)
+                                <tr class=" border-t-2">
+                                    <td>{{ $event->id }}</td>
+                                    <td>{{ $event->title }}</td>
+                                    <td>{{ $event->location }}</td>
+                                    <td>{{ $event->price }} MAD</td>
+                                    <td>{{ $event->date_start }}</td>
+                                    <td>@include('pages.create_events.components.update_modal')</td>
+                                    <td>@include('pages.create_events.components.delete')</td>
+                                </tr>
+                            @endif
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
         <script>
             document.addEventListener('DOMContentLoaded', async function() {
-                // const {data} = await axios.get('/calendar/events')
-                // console.log(data);
+                const {
+                    data
+                } = await axios.get('/calendar/events')
+                console.log(data);
                 var calendarEl = document.getElementById('calendar');
                 var calendar = new FullCalendar.Calendar(calendarEl, {
                     headerToolbar: {
@@ -51,7 +88,7 @@
                     selectOverlap: true,
                     weekends: true,
                     // editable: true,
-                    // events : data,
+                    events: data,
                     selectAllow: (info) => {
                         let instant = new Date()
                         return info.start > instant
@@ -74,6 +111,7 @@
                     }
                 });
                 calendar.render();
+
                 function formatDate(date) {
                     let year = String(date.getFullYear())
                     let month = String(date.getMonth() + 1).padStart(2, 0)
