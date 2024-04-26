@@ -4,6 +4,7 @@ use App\Http\Controllers\CreateEventsController;
 use App\Http\Controllers\EditUsersController;
 use App\Http\Controllers\EventAdminController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MyOrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\TicketsController;
@@ -44,7 +45,10 @@ Route::middleware('auth')->group(function () {
     // ^^ Ticket page :
     Route::get('/home/ticket/{event}', [TicketsController::class, 'show'])->name('ticket.show');
     Route::post('/home/ticket/post', [TicketsController::class, 'store'])->name('ticket.post');
-    Route::get('/success' , [TicketsController::class , "success"])->name('success');
+    Route::get('/success/{ticket}' , [TicketsController::class , "success"])->name('success');
+    // ^^ MyOrder page :
+    Route::get('/myorder', [MyOrderController::class, 'index'])->name('myorder.index');
+
 
 
 

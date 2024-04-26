@@ -16,6 +16,7 @@ class Tickets extends Model
         "price",
         "quantity",
         "pdf",
+        "payedBolean",
     ];
 
     public function user(){

@@ -37,13 +37,14 @@ class TicketsController extends Controller
             "quantity"=>"required",
             "eventId"=>"required",
         ]);
-        Tickets::create([   
+        $ticket = Tickets::create([   
             "user_id"=>$userId,
             "event_id"=>$request->eventId,
             "price"=>$request->price,
             "ticket_type"=>"normal",
             "quantity"=>$request->quantity,
             "pdf"=>"walo",
+            "payedBolean"=>false,
 
         ]);
 
@@ -69,17 +70,20 @@ class TicketsController extends Controller
 
             ],
             'mode'        => 'payment', // the mode  of payment
-            'success_url' => route('success'), // route when success 
+            'success_url' => route('success' , $ticket), // route when success 
             'cancel_url'  => route('home'), // route when  failed or canceled
         ]);
 
+        
         return redirect()->away($session->url);
 
         // return back();
 
     }
-    public function success(){
-        return back();
+    public function success(Tickets $ticket){
+        $ticket->payedBolean = true ;
+        $ticket->save();
+        return redirect()->route('home');
     }
 
     /**

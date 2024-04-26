@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer("price");
             $table->integer("quantity");
             $table->string("pdf")->nullable();
+            $table->string("payedBolean");
             $table->timestamps();
         });
     }
