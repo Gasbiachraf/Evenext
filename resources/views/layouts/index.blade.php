@@ -19,10 +19,10 @@
     @include('layouts.navigation')
 
     @yield('content')
-
-    {{-- <div class="pt-10">
+    
+    <div class="">
         @include('layouts.components.footer')
-    </div> --}}
+    </div>
 
 </body>
 

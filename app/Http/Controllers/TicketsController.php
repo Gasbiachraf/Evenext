@@ -58,7 +58,7 @@ class TicketsController extends Controller
             'line_items'  => [
                 [
                     'price_data' => [
-                        'currency'     => 'usd',
+                        'currency'     => 'mad',
                         'product_data' => [
                             "name" => "$event->title",
                             "description"=> "$event->description"

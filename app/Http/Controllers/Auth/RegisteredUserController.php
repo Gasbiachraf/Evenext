@@ -46,7 +46,9 @@ class RegisteredUserController extends Controller
             // 'phone' => $request->phone,
             // 'role' => $request->role,
         ]);
-        $user->assignRole($request->role);
+        if ($request->role != "attendee") {
+            $user->assignRole($request->role);
+        }
         event(new Registered($user));
 
         Auth::login($user);

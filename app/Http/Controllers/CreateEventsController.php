@@ -44,11 +44,11 @@ class CreateEventsController extends Controller
     public function show(Events $event)
     {
         //
-        $events = Events::all()->map(function(Events $event){
+        $events = Events::where('user_id' , auth()->user()->id)->get()->map(function(Events $event){
             return [
                 "title"=>$event->title,
-                // "start"=>$event->startDate,
-                // "end"=>$event->endDate,
+                "start"=>$event->date_start,
+                "end"=>$event->enddate_end,
             ];
         });
         return response()->json($events);

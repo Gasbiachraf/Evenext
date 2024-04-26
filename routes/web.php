@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CreateEventsController;
 use App\Http\Controllers\EditUsersController;
 use App\Http\Controllers\EventAdminController;
@@ -27,36 +28,30 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     //* pages :
     // ^^ Home page :
-    Route::get('/',[HomeController::class ,  "index"])->name("home");
-    // ^^ Create events page :
-    Route::get('/event', [CreateEventsController::class, 'index'])->name('event.index')->middleware("role:organizer|admin");
-    Route::post('/event/create', [CreateEventsController::class, 'store'])->name('event.post');
-    Route::put('/event/update/{event}', [CreateEventsController::class, 'update'])->name('event.update');
-    Route::delete('/event/delete/{event}', [CreateEventsController::class, 'destroy'])->name('event.delete');
-    Route::get('/calendar/events', [CreateEventsController::class , "show"]);
-    // ^^ Edit_users page :
-    Route::get('/edit/users', [EditUsersController::class, 'index'])->name('users.index')->middleware("role:admin"); //admin
-    Route::put('/user/update/{user}', [EditUsersController::class, 'update'])->name('user.update');
-    Route::delete('/user/delete/{user}', [EditUsersController::class, 'destroy'])->name('user.delete');
-    // ^^ Edit_events_admin page :
-    Route::get('/events/admin', [EventAdminController::class, 'index'])->name('event_admin.index')->middleware("role:admin"); //admin
-    // ^^ Stripe page :
-    // Route::get('/session' , [StripeController::class , "session"]);
+    Route::get('/', [HomeController::class,  "index"])->name("home");
+    Route::get('/contact', [ContactController::class, 'index'])->name('event.index');
+    Route::middleware("role:organizer|admin")->group(function () {
+        // ^^ Create events page :
+        Route::get('/event', [CreateEventsController::class, 'index'])->name('event.index');
+        Route::post('/event/create', [CreateEventsController::class, 'store'])->name('event.post');
+        Route::put('/event/update/{event}', [CreateEventsController::class, 'update'])->name('event.update');
+        Route::delete('/event/delete/{event}', [CreateEventsController::class, 'destroy'])->name('event.delete');
+        Route::get('/calendar/events', [CreateEventsController::class, "show"]);
+    });
+    Route::middleware("role:admin")->group(function () {
+        // ^^ Edit_users page :
+        Route::get('/edit/users', [EditUsersController::class, 'index'])->name('users.index'); //admin
+        Route::put('/user/update/{user}', [EditUsersController::class, 'update'])->name('user.update');
+        Route::delete('/user/delete/{user}', [EditUsersController::class, 'destroy'])->name('user.delete');
+        // ^^ Edit_events_admin page :
+        Route::get('/events/admin', [EventAdminController::class, 'index'])->name('event_admin.index'); //admin
+    });
     // ^^ Ticket page :
     Route::get('/home/ticket/{event}', [TicketsController::class, 'show'])->name('ticket.show');
     Route::post('/home/ticket/post', [TicketsController::class, 'store'])->name('ticket.post');
-    Route::get('/success/{ticket}' , [TicketsController::class , "success"])->name('success');
+    Route::get('/success/{ticket}', [TicketsController::class, "success"])->name('success');
     // ^^ MyOrder page :
     Route::get('/myorder', [MyOrderController::class, 'index'])->name('myorder.index');
-
-
-
-
-
-
-
-
-
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

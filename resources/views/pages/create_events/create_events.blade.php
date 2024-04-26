@@ -47,7 +47,7 @@
             document.addEventListener('DOMContentLoaded', async function() {
                 const {
                     data
-                } = await axios.get('/calendar/events')
+                } = await axios.get(`/calendar/events`)
                 console.log(data);
                 var calendarEl = document.getElementById('calendar');
                 var calendar = new FullCalendar.Calendar(calendarEl, {
