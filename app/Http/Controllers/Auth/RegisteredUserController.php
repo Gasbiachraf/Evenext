@@ -46,10 +46,16 @@ class RegisteredUserController extends Controller
             // 'phone' => $request->phone,
             // 'role' => $request->role,
         ]);
-
+        $user->assignRole($request->role);
         event(new Registered($user));
 
         Auth::login($user);
+        
+        if ($user->hasRole("admin")) {
+            return redirect()->route("event_admin.index");
+        }else if ($user->hasRole("editor")) {
+            return redirect()->route("event.post");
+        } 
 
         return redirect(route('home', absolute: false));
     }

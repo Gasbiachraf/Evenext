@@ -35,7 +35,7 @@
                         </div>
                         <div class="flex flex-col pb-3">
                             <label for="" class="pb-1">Quantity</label>
-                            <input type="number" placeholder="insert a number" name="quantity" required class="rounded-lg">
+                            <input min="1" type="number" placeholder="insert a number" name="quantity" required class="rounded-lg">
                         </div>
                         <input type="text" value="{{ $event->id }}" class="hidden" name="eventId">
                         <button  id="formTicket"

@@ -20,9 +20,9 @@
 
     @yield('content')
 
-    <div class="pt-10">
+    {{-- <div class="pt-10">
         @include('layouts.components.footer')
-    </div>
+    </div> --}}
 
 </body>
 
