@@ -23,7 +23,8 @@
                 class="absolute -top-[3%] md:-top-[10%] left-1/2 -translate-x-1/2 grid grid-cols-1 md:grid-cols-3 h-fit w-4/5 md:w-[90%] lg:w-4/5 rounded shadow overflow-hidden text-white">
                 <!-- {/* form / left div  */} -->
                 <div class="p-2 md:p-4 h-full bg-gray-800 col-span-2">
-                    <form>
+                    <form action="{{ route('contact.store') }} " method="post">
+                        @csrf
                         <!-- {/* form top part containing mail icon and heading  */} -->
                         <div class="flex flex-col md:flex-row justify-around items-start md:items-center pt-8 p-4">
                             <!-- {/* heading  */} -->
@@ -85,25 +86,25 @@
                                     Message <span class="text-red-500">&#42;</span>
                                 </label>
                                 <input class="border-[1px] border-white bg-gray-800 p-2 rounded-md"
-                                    placeholder="Enter Your Message" required name="subject" type="text" />
+                                    placeholder="Enter Your Message" required name="message" type="text" />
                             </div>
+                        </div>
+                        <!-- {/* submit button div  */} -->
+                        <div class="flex items-center justify-center md:justify-end py-4 px-8">
+                            <!-- {/* submit button  */} -->
+                            <button
+                                class="py-2 px-4 md:py-4 md:px-6 bg-gray-800 rounded-md border-2 border-white flex items-center gap-2 hover:scale-95 transition-all">
+                                <span class="text-xl">Submit</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram"
+                                    width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+                                </svg>
+                            </button>
                         </div>
                     </form>
 
-                    <!-- {/* submit button div  */} -->
-                    <div class="flex items-center justify-center md:justify-end py-4 px-8">
-                        <!-- {/* submit button  */} -->
-                        <button
-                            class="py-2 px-4 md:py-4 md:px-6 bg-gray-800 rounded-md border-2 border-white flex items-center gap-2 hover:scale-95 transition-all">
-                            <span class="text-xl">Submit</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram"
-                                width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff"
-                                fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
-                            </svg>
-                        </button>
-                    </div>
                 </div>
 
                 <!-- {/* right div  */} -->

@@ -9,6 +9,7 @@ use App\Http\Controllers\MyOrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\TicketsController;
+use App\Mail\ContactMailer;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,6 +23,9 @@ Route::get('/test', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('home');
 
+Route::get('/contact', [ContactController::class, 'index'])->name('event.index');
+Route::post('/contact/post', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/achraf', [ContactMailer::class, 'index']);
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -29,7 +33,6 @@ Route::middleware('auth')->group(function () {
     //* pages :
     // ^^ Home page :
     Route::get('/', [HomeController::class,  "index"])->name("home");
-    Route::get('/contact', [ContactController::class, 'index'])->name('event.index');
     Route::middleware("role:organizer|admin")->group(function () {
         // ^^ Create events page :
         Route::get('/event', [CreateEventsController::class, 'index'])->name('event.index');
