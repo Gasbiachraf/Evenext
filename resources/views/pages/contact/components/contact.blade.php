@@ -5,7 +5,7 @@
         <!-- {/* top container with tagline and backgroundImage  */} -->
         <div class="relative">
             <!-- {/* image section  */} -->
-            <section class="w-full h-[30vh] lg:h-[35vh] bg-cover bg-center brightness-50" style="background: black">
+            <section class="w-full h-[30vh] lg:h-[35vh] bg-cover bg-center brightness-50 bg-gray-900" >
             </section>
             <!-- {/* tagline division  */} -->
             <div class="absolute top-1/2 left-[5%] md:left-[10%] -translate-y-1/2 text-white">

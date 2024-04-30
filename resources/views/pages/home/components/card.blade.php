@@ -16,7 +16,7 @@
         <div class="flex justify-between items-center  pt-1  ">
             <div class="pl-1 text-xl text-red-600">{{ $event->price }} MAD</div>
             <form action="{{ route('ticket.show', $event) }}" method="get">
-                <button class="cursor-pointer bg-blue-600 px-4 py-2 rounded-xl text-white font-medium">Buy</button>
+                <button class="cursor-pointer bg-blue-600 px-4 py-2 rounded-xl text-white font-semibold">Buy</button>
             </form>
         </div>
 

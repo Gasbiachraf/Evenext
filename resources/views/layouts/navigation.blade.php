@@ -26,15 +26,16 @@
                         </x-nav-link>
                     </div>
                     <div class="hidden space-x-2 sm:-my-px sm:ms-4 sm:flex">
-                        <x-nav-link class="font-semibold text-decoration-none" :href="route('contact')" :active="request()->routeIs('contact')">
+                        <x-nav-link class="font-semibold text-decoration-none" :href="route('about')" :active="request()->routeIs('about')">
                             {{ __('About') }}
                         </x-nav-link>
                     </div>
                     <div class="hidden space-x-2 sm:-my-px sm:ms-4 sm:flex">
-                        <x-nav-link class="font-semibold text-decoration-none"  >
-                            {{ __('Blog') }}
+                        <x-nav-link class="font-semibold text-decoration-none" :href="route('blogs')" :active="request()->routeIs('blogs')">
+                            {{ __('Blogs') }}
                         </x-nav-link>
                     </div>
+
 
                 </div>
 

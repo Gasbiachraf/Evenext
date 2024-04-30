@@ -9,7 +9,7 @@
 <body>
     
     
-    <div style="background: red  ">
+    <div >
          <h1>Email :  {{ $data["email"] }}</h1>
          <h1>message :  {{ $data["message"] }}</h1>
 

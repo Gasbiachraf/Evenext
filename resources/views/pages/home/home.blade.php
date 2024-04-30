@@ -6,5 +6,7 @@
             @include('pages.home.components.card')
         @endforeach
     </div>
+    @include('pages.home.components.motivation')
     @include('pages.home.components.statistic')
+    @include('pages.home.components.sponsor')
 @endsection

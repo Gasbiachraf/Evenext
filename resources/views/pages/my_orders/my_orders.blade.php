@@ -2,7 +2,7 @@
 @section('content')
 
 <h1 class="pl-20 pt-10">my orders :</h1>
-    <div class="flex justify-center w-full  mt-10">
+    <div class="flex justify-center w-full  my-10">
         <div class="w-[70%]  pt-2  shadow-xl border-2 rounded-xl max-h-[70vh] overflow-auto p-2">
             <table class="w-full table-fixed text-center  " >
                 <thead class="border-b-2  ">

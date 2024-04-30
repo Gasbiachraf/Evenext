@@ -22,9 +22,22 @@ Route::get('/test', function () {
 // Route::get('/home', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('home');
-
+// ^^ Contact page :
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact/post', [ContactController::class, 'store'])->name('contact.store');
+// ^^ blogs page :
+Route::get('/blogs', function () {
+    return view('pages.blogs.blogs');
+})->name("blogs");
+// ^^ about page :
+Route::get('/about', function () {
+    return view('pages.about.about');
+})->name("about");
+// ^^ faq page :
+Route::get('/faq', function () {
+    return view('pages.faq.faq');
+})->name("faq");
+
 // ^^ Home page :
 Route::get('/', [HomeController::class,  "index"])->name("home");
 Route::middleware('auth')->group(function () {

@@ -3,10 +3,10 @@
 
 
 
-<body class="border-2">
+<body class="border-2  bg-slate-400">
     <div class="container flex flex-col mx-auto ">
         <div class="w-full draggable">
-            <div class="container flex flex-col items-center gap-16 mx-auto my-32">
+            <div class="container flex flex-col items-center gap-16 mx-auto mt-10">
                 <div class="grid w-full grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-y-8">
                     <div class="flex flex-col items-center">
                         <h3 class="text-5xl font-extrabold leading-tight text-center text-dark-grey-900"><span
