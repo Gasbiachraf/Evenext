@@ -1,8 +1,9 @@
-@extends('layouts.index')
+@extends('layouts.admin_organizer')
 
-@section('content')
-    <div class="flex justify-center w-full mt-10">
-        <div class="w-[70%]    p-2 shadow-xl border-2 rounded-xl max-h-[70vh] overflow-auto ">
+@section('content2')
+
+    <div class="flex justify-center w-full  mb-20">
+        <div class="w-[90%]    p-2 shadow-xl border-2 rounded-xl max-h-[70vh] overflow-auto ">
             <table class="w-full table-fixed text-center  ">
                 <thead class="border-b-2  ">
                     <th>#</th>
@@ -27,4 +28,5 @@
             </table>
         </div>
     </div>
-    @endsection
+
+@endsection

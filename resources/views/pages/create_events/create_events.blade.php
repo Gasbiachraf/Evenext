@@ -6,8 +6,8 @@
         <div class="p-4"> @include('pages.create_events.components.sidebare')</div>
 
 
-        <div class="flex justify-center w-full ">
-            <div class="w-[70%]  pt-2  shadow-xl border-2 rounded-xl max-h-[70vh] overflow-auto ">
+        <div class="flex justify-center w-full mb-20">
+            <div class="w-[90%]  pt-2  shadow-xl border-2 rounded-xl max-h-[70vh] overflow-auto ">
                 <table class="w-full table-fixed text-center  " >
                     <thead class="border-b-2  ">
                         <th>#</th>

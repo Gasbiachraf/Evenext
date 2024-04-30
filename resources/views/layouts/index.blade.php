@@ -18,6 +18,8 @@
 
     @include('layouts.navigation')
 
+    
+
     @yield('content')
     
     <div class="">

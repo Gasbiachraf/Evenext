@@ -1,4 +1,4 @@
-Projet Event Management System :
+Projet Event Management System : EveNXt (Combines "Eve" and "Next" for upcoming events).
 Users can create accounts as organizers or attendees (authentication with user roles).
 Organizers can create event listings with descriptions, dates, times, locations (using a map integration), and ticket pricing.
 Attendees can browse events and purchase tickets securely using Stripe.

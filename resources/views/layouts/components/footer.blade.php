@@ -160,7 +160,7 @@
 
 <!-- footer 3 -->
 
-<footer class="relative bg-blueGray-200 pt-8 pb-6 bg-slate-100">
+{{-- <footer class="relative bg-blueGray-200 pt-8 pb-6 bg-slate-100 ">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap text-left lg:text-left">
             <div class="w-full lg:w-6/12 px-4">
@@ -191,19 +191,19 @@
                         <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span>
                         <ul class="list-unstyled">
                             <li>
-                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm text-decoration-none"
                                     href="https://www.creative-tim.com/presentation?ref=njs-profile">About Us</a>
                             </li>
                             <li>
-                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm text-decoration-none"
                                     href="https://blog.creative-tim.com?ref=njs-profile">Blog</a>
                             </li>
                             <li>
-                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm text-decoration-none"
                                     href="https://www.github.com/creativetimofficial?ref=njs-profile">Github</a>
                             </li>
                             <li>
-                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm text-decoration-none"
                                     href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Free
                                     Products</a>
                             </li>
@@ -214,20 +214,20 @@
                             Resources</span>
                         <ul class="list-unstyled">
                             <li>
-                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm text-decoration-none"
                                     href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT
                                     License</a>
                             </li>
                             <li>
-                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm text-decoration-none"
                                     href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
                             </li>
                             <li>
-                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm text-decoration-none"
                                     href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
                             </li>
                             <li>
-                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm text-decoration-none"
                                     href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
                             </li>
                         </ul>
@@ -238,19 +238,136 @@
         <hr class="my-6 border-blueGray-300">
         <div class="flex flex-wrap items-center md:justify-between justify-center">
             <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-                <div class="text-sm text-blueGray-500 font-semibold py-1">
-                    Copyright © <span id="get-current-year">2021</span><a
-                        href="https://www.creative-tim.com/product/notus-js"
-                        class="text-blueGray-500 hover:text-gray-800" target="_blank"> Notus JS by
-                        <a href="https://www.creative-tim.com?ref=njs-profile"
-                            class="text-blueGray-500 hover:text-blueGray-800">Creative Tim</a>.
+                <div class="text-sm text-blueGray-500 font-semibold py-1 px-10">
+                    Copyright © <span id="get-current-year">2024</span> | Created By
+                    <a target="blank" href="https://portfolio-achrafgasbi.vercel.app/"
+                        class="text-blueGray-500 hover:text-blueGray-800 text-decoration-none"> Achraf Gasbi</a>.
                 </div>
             </div>
         </div>
     </div>
+</footer> --}}
+
+{{-- footer 4 --}}
+<!-- component -->
+
+
+<footer class="w-full text-gray-700 bg-slate-100 body-font">
+    <div
+        class="container flex flex-col flex-wrap px-5 py-10 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
+        <div class="flex w-full max-[430px]:flex-col mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
+            <div class="flex-shrink-0 max-[430px]:pb-8 w-64 mx-auto text-center md:mx-0 md:text-left">
+                <a href="{{ route('home') }}">
+                    <img class="w-[8vw] max-[430px]:w-[25vw]" src="{{ asset('images/logo-evenxt2.png') }}" alt="">
+                </a>
+                <p class="mt-4 text-sm text-gray-500 text-start">Click, Attend, Relive!</p>
+                <div class="mt-2 text-start">
+                    <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-700">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path stroke="none"
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                </path>
+                                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="w-full text-start px-4 lg:w-1/4 md:w-1/2 ">
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">About</h2>
+                <nav class="mb-10 list-none">
+                    <li class="mt-3">
+                        <a class="text-gray-500 text-decoration-none cursor-pointer hover:text-gray-900">Company</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 text-decoration-none cursor-pointer hover:text-gray-900">Careers</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 text-decoration-none cursor-pointer hover:text-gray-900">Blog</a>
+                    </li>
+                </nav>
+            </div>
+            <div class="w-full text-start px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Support
+                </h2>
+                <nav class="mb-10 list-none">
+                    <li class="mt-3">
+                        <a class="text-gray-500 text-decoration-none cursor-pointer hover:text-gray-900">Contact Support</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 text-decoration-none cursor-pointer hover:text-gray-900">Help Resources</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 text-decoration-none cursor-pointer hover:text-gray-900">Release Updates</a>
+                    </li>
+                </nav>
+            </div>
+            <div class="w-full text-start px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Platform
+                </h2>
+                <nav class="mb-10 list-none">
+                    <li class="mt-3">
+                        <a class="text-gray-500 text-decoration-none cursor-pointer hover:text-gray-900">Terms &amp; Privacy</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 text-decoration-none cursor-pointer hover:text-gray-900">Pricing</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 text-decoration-none cursor-pointer hover:text-gray-900">FAQ</a>
+                    </li>
+                </nav>
+            </div>
+            <div class="w-full text-start px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Contact
+                </h2>
+                <nav class="mb-10 list-none">
+                    <li class="mt-3">
+                        <a class="text-gray-500 text-decoration-none cursor-pointer hover:text-gray-900">Send a Message</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 text-decoration-none cursor-pointer hover:text-gray-900">Request a Quote</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 text-decoration-none cursor-pointer hover:text-gray-900">+123-456-7890</a>
+                    </li>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+    <div class="text-sm text-blueGray-500 font-semibold py-1 px-10 pb-4 text-center">
+        Copyright © <span id="get-current-year">2024</span> | Created By
+        <a target="blank" href="https://portfolio-achrafgasbi.vercel.app/"
+            class="text-blueGray-500 hover:text-blueGray-800 text-decoration-none"> Achraf Gasbi</a>.
+    </div>
 </footer>
 
-<!-- footer 4 -->
+
+
+<!-- footer 5 -->
 {{-- <footer class="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100">
     <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
