@@ -1,6 +1,6 @@
 <!-- component -->
 <div class="relative z-20 sm:z-auto mx-auto  my-8">
-    <div class="mx-auto max-w-[80vw] px-4  sm:px-6 lg:px-8">
+    <div class="mx-auto sm:max-w-[80vw] px-4  sm:px-6 lg:px-8">
         <h1 class="text-center pb-10">EvenXt service</h1>
         <div class="relative mx-auto grid max-w-[40rem] grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             <div class="flex shadow-md bg-slate-100 p-4">
