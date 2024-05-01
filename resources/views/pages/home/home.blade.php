@@ -1,6 +1,7 @@
 @extends('layouts.index')
 @section('content')
     @include('pages.home.components.heroSection')
+    <h1 class="text-center py-10">All Events :</h1>
     <div class="max-[430px]:p-4 lg:p-10  flex gap-4 flex-wrap">
         @foreach ($events as $event)
             @include('pages.home.components.card')

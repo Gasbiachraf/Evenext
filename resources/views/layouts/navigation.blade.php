@@ -84,13 +84,21 @@
                             </x-dropdown-link>
 
                             @auth
-                                @if (Auth::user()->role === 'admin')
+                                @if (Auth::user()->role === 'admin' || Auth::user()->role === 'organizer')
                                     <div class="px-4">
                                         <hr class="m-0 py-1">
                                     </div>
                                     <x-dropdown-link class="text-decoration-none mb-1" :href="route('event.index')">
                                         {{ __('Create Event') }}
                                     </x-dropdown-link>
+                                    @if (Auth::user()->role === 'admin' || Auth::user()->role === 'organizer')
+                                        <x-dropdown-link class="text-decoration-none mb-1" :href="route('users.index')">
+                                            {{ __('Edit Users') }}
+                                        </x-dropdown-link>
+                                        <x-dropdown-link class="text-decoration-none mb-1" :href="route('event_admin.index')">
+                                            {{ __('Edit Events of users') }}
+                                        </x-dropdown-link>
+                                    @endif
                                 @endif
                             @endauth
 
@@ -187,13 +195,21 @@
                     </x-responsive-nav-link>
 
                     @auth
-                        @if (Auth::user()->role === 'admin')
+                        @if (Auth::user()->role === 'admin' || Auth::user()->role === 'organizer')
                             <div class="">
                                 <hr class="m-0 py-1">
                             </div>
                             <x-dropdown-link class="text-decoration-none mb-1" :href="route('event.index')">
                                 {{ __('Create Event') }}
                             </x-dropdown-link>
+                            @if (Auth::user()->role === 'admin' || Auth::user()->role === 'organizer')
+                                <x-dropdown-link class="text-decoration-none mb-1" :href="route('users.index')">
+                                    {{ __('Edit users') }}
+                                </x-dropdown-link>
+                                <x-dropdown-link class="text-decoration-none mb-1" :href="route('event_admin.index')">
+                                    {{ __('Edit Events of users') }}
+                                </x-dropdown-link>
+                            @endif
                         @endif
                         <div class="">
                             <hr class="m-0 py-1">

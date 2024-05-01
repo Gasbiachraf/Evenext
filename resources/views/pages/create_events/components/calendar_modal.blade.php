@@ -1,7 +1,9 @@
 <!-- Button trigger modal -->
-<button id="buttonModal" type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-</button>
+<div class="max-[430px]:block hidden">
+    <button id="buttonModal" type="button" class="btn btn-primary w-[26vw] p-0 py-2 m-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        add event
+    </button>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -23,7 +25,7 @@
                     <label for="">Description </label>
                         <textarea name="description" placeholder="add description ..." type="text"
                         class="w-full rounded-xl border-2 border-black p-2"></textarea>
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 max-[430px]:flex-col">
                         <div class="w-[100%]">
                             {{-- start date --}}
                             <label for="">start date </label>
@@ -37,7 +39,7 @@
                                 class="w-full rounded-xl border-2 border-black p-2">
                         </div>
                     </div>
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 max-[430px]:flex-col">
                         <div class="w-[100%]">
                             {{-- price --}}
                             <label for="">Price </label>

@@ -22,12 +22,12 @@
                             <thead class="bg-gray-50 dark:bg-gray-800">
                                 <tr>
                                     <th scope="col"
-                                        class="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                        <div class="flex items-center gap-x-3">
-                                            <button class="flex items-center gap-x-2">
-                                                <span># Order</span>
-                                            </button>
-                                        </div>
+                                        class="py-3.5 px-4 text-sm font-normal text-center rtl:text-right text-gray-500 dark:text-gray-400">
+
+    
+                                                #
+
+
                                     </th>
 
 
@@ -131,11 +131,15 @@
                 </div>
             </div>
         </div>
-
-
     </section>
     
 @else
-     ma3andak walo 
+    <div class=" w-full flex flex-col items-center">
+        <h1>You don't have any tickets ! <br>
+        </h1>
+        <h3>Explore a world of possibilities - the perfect event for you is just a click away.</h3>
+        
+        <img class="" src="{{ asset('images/myorder-vide.png') }}" alt="">
+    </div>
 @endif
 @endsection

@@ -1,5 +1,7 @@
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+<div class="max-[430px]:hidden">
+    <button class="btn btn-primary "  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
 aria-controls="offcanvasScrolling">Add Event</button>
+</div>
 
 <div class="offcanvas offcanvas-bottom w-100 h-75 my-5 bg-calendar " data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
 id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
