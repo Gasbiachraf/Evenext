@@ -6,22 +6,22 @@
     <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
         <div class="absolute top-0 w-full h-full bg-center bg-cover"
             style="
-            background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80');
+            background-image: url('images/about.jpg');
+            background-attachment: fixed;
           ">
-            <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+            <span id="blackOverlay" class="w-full h-full absolute opacity-25 bg-black"></span>
         </div>
         <div class="container relative mx-auto">
             <div class="items-center flex flex-wrap">
-                <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                    <div class="pr-12">
-                        <h1 class="text-white font-semibold text-5xl">
-                            Your story starts with us.
+                <div class="w-full  px-4 ml-auto mr-auto text-center">
+                    <div class="pr-12 ">
+                        <h1 class="text-white  font-semibold text-5xl pt-36 pb-20">
+                            Your Gateway to Extraordinary Events .
                         </h1>
-                        <p class="mt-4 text-lg text-blueGray-200">
-                            This is a simple example of a Landing Page you can build using
-                            Notus JS. It features multiple CSS components based on the
-                            Tailwind CSS design system.
-                        </p>
+                        {{-- <p class="mt-4 text-lg text-white">
+                            Explore. Create. Connect. evenXt empowers you to discover unique experiences, manage your
+                            events seamlessly, and build lasting connections.
+                        </p> --}}
                     </div>
                 </div>
             </div>
@@ -44,10 +44,10 @@
                                 class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
                                 <i class="fas fa-award"></i>
                             </div>
-                            <h6 class="text-xl font-semibold">Awarded Agency</h6>
+                            <h6 class="text-xl font-semibold">Enhance Your Experience</h6>
                             <p class="mt-2 mb-4 text-blueGray-500">
-                                Divide details about your product or agency work into parts.
-                                A paragraph describing a feature will be enough.
+                                Real-time updates, attendee connections, and digital tools to make your event experience
+                                smoother and more enjoyable.
                             </p>
                         </div>
                     </div>
@@ -59,10 +59,10 @@
                                 class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
                                 <i class="fas fa-retweet"></i>
                             </div>
-                            <h6 class="text-xl font-semibold">Free Revisions</h6>
+                            <h6 class="text-xl font-semibold">Unlock Exclusive Deals</h6>
                             <p class="mt-2 mb-4 text-blueGray-500">
-                                Keep you user engaged by providing meaningful information.
-                                Remember that by this time, the user is curious.
+                                Get access to early bird tickets, discounts, and special offers you won't find anywhere
+                                else.
                             </p>
                         </div>
                     </div>
@@ -74,16 +74,66 @@
                                 class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
                                 <i class="fas fa-fingerprint"></i>
                             </div>
-                            <h6 class="text-xl font-semibold">Verified Company</h6>
+                            <h6 class="text-xl font-semibold">Stay Ahead of the Curve</h6>
                             <p class="mt-2 mb-4 text-blueGray-500">
-                                Write a few lines about each one. A paragraph describing a
-                                feature will be enough. Keep you user engaged!
+                                EvenXt keeps you informed about upcoming events you might be interested in, ensuring you
+                                never miss out on the latest happenings.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <footer class="relative  pt-8 pb-6 mt-1">
+            <h1 class="text-center pt-12 pb-8"> Who are we ?</h1>
+            <div>
+                <p class="text-lg pb-4">Tired of the same old event experience? <span class="font-bold">EvenXt</span> is
+                    here
+                    to revolutionize the way you connect with events. We're a cutting-edge platform designed to elevate
+                    your event journey, from discovery to unforgettable memories.
+                </p>
+                <h2>Your Event Companion</h2>
+                <p class="text-lg pb-4">
+                    EvenXt stays with you every step of the way. Manage your bookings, receive real-time updates, and
+                    connect with fellow attendees to create lasting memories. Our user-friendly app keeps everything you
+                    need in the palm of your hand.
+                </p>
+                <h2>Where Events Become Extraordinary</h2>
+                <p class="text-lg pb-4">
+                    This description highlights evenXt's focus on innovation, exclusive benefits, and a user-friendly
+                    experience. You can customize it further by adding details about specific features or event types
+                    you cater to.
+                </p>
+                <h2>Event Creation & Management:</h2>
+                <ol>
+                    <li>
+                        <p class="text-lg m-0 pb-2">
+                            <span class="font-bold">1. Go beyond discovery :</span> Don't just find events, create them!
+                            evenXt empowers event organizers to create and manage their events with ease.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-lg m-0 pb-2">
+                            <span class="font-bold">2. Effortless event setup :</span> Build beautiful event pages,
+                            manage ticketing, and track RSVPs - all from a user-friendly dashboard.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-lg m-0 pb-2">
+                            <span class="font-bold">3. Reach the right audience :</span> Promote your events to the
+                            evenXt community and leverage powerful targeting tools to find the perfect attendees.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-lg m-0 pb-2">
+                            <span class="font-bold">4. Streamlined communication :</span> Connect with attendees
+                            seamlessly, send updates, and manage registrations efficiently.
+                        </p>
+                    </li>
+
+                </ol>
+
+
+            </div>
+            {{-- <footer class="relative  pt-8 pb-6 mt-1">
                 <div class="container mx-auto px-4">
                     <div class="flex flex-wrap items-center md:justify-between justify-center">
                         <div class="w-full md:w-6/12 px-4 mx-auto text-center">
@@ -96,6 +146,6 @@
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer> --}}
     </section>
 </section>

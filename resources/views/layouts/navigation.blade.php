@@ -64,7 +64,7 @@
                         <x-slot name="trigger">
                             <button
                                 class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                                <div class=""> {{ Auth::user() ? Auth::user()->name : 'ach' }}</div>
+                                <div class=""> {{ Auth::user()->name }}</div>
                                 <div class="ms-1">
                                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 20 20">
@@ -110,23 +110,22 @@
                         </x-slot>
                     </x-dropdown>
                 @else
-
-                <x-dropdown align="right" width="48">
-                    <x-slot name="trigger">
-                        <button
-                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                            <div class=""> signUp/LogIn</div>
-                        </button>
-                    </x-slot>
-                    <x-slot name="content">
-                        <x-dropdown-link class="text-decoration-none" :href="route('login')">
-                            {{ __('Log In') }}
-                        </x-dropdown-link>
-                        <x-dropdown-link class="text-decoration-none mb-1" :href="route('register')">
-                            {{ __('Sign Up') }}
-                        </x-dropdown-link>
-                    </x-slot>
-                </x-dropdown>
+                    <x-dropdown align="right" width="48">
+                        <x-slot name="trigger">
+                            <button
+                                class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                                <div class=""> signUp/LogIn</div>
+                            </button>
+                        </x-slot>
+                        <x-slot name="content">
+                            <x-dropdown-link class="text-decoration-none" :href="route('login')">
+                                {{ __('Log In') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link class="text-decoration-none mb-1" :href="route('register')">
+                                {{ __('Sign Up') }}
+                            </x-dropdown-link>
+                        </x-slot>
+                    </x-dropdown>
 
                 @endif
             </div>
@@ -172,26 +171,47 @@
 
 
         <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
-            <div class="px-4">
-                <div class="font-medium text-base text-gray-800 dark:text-gray-200">
-                    {{ Auth::user() ? Auth::user()->name : 'ach' }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user() ? Auth::user()->email : 'ach' }}</div>
-            </div>
-            <div class="mt-3 space-y-1">
-                <x-responsive-nav-link class="text-decoration-none" :href="route('profile.edit')">
-                    {{ __('Profile') }}
-                </x-responsive-nav-link>
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <x-responsive-nav-link class="text-decoration-none" :href="route('logout')"
-                        onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Log Out') }}
+        @if (Auth::user())
+            <div class="pt-4 pb-1 border-t border-slate-100 dark:border-gray-600">
+                <div class="px-4">
+                    <div class="font-medium text-base text-gray-800 dark:text-gray-200">
+                        {{ Auth::user()->name }}</div>
+                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                </div>
+                <div class="mt-3 space-y-1">
+                    <x-responsive-nav-link class="text-decoration-none" :href="route('myorder.index')">
+                        {{ __('My orders') }}
                     </x-responsive-nav-link>
-                </form>
+                    <x-responsive-nav-link class="text-decoration-none" :href="route('profile.edit')">
+                        {{ __('Profile') }}
+                    </x-responsive-nav-link>
+
+                    @auth
+                        @if (Auth::user()->role === 'admin')
+                            <div class="">
+                                <hr class="m-0 py-1">
+                            </div>
+                            <x-dropdown-link class="text-decoration-none mb-1" :href="route('event.index')">
+                                {{ __('Create Event') }}
+                            </x-dropdown-link>
+                        @endif
+                        <div class="">
+                            <hr class="m-0 py-1">
+                        </div>
+                    @endauth
+
+                    <!-- Authentication -->
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <x-responsive-nav-link class="text-decoration-none" :href="route('logout')"
+                            onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </x-responsive-nav-link>
+                    </form>
+                </div>
             </div>
-        </div>
+        @else
+        @endif
     </div>
 </nav>

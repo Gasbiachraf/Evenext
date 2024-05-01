@@ -11,25 +11,25 @@
         </div>
 
         <!-- Email Address -->
-        <div class="mt-4">
+        <div class="mt-2">
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full rounded-lg  border-2" placeholder="insert your  email" type="email" name="email" :value="old('email')"
                 required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
         <!-- phone -->
-        <div class="mt-4">
-            <x-input-label for="phone" :value="__('phone')" />
+        <div class="mt-2">
+            <x-input-label for="phone" :value="__('Phone')" />
             <x-text-input id="phone" class="block mt-1 w-full border-2  rounded-lg  " placeholder="insert your phone number" type="number" name="phone"
                 :value="old('phone')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('phone')" class="mt-2" />
         </div>
         <!-- role -->
-        <div class="mt-4">
-            <x-input-label for="role" :value="__('role')" />
-            <select name="role" id="role" class="block mt-1 w-full border-2 rounded-lg border-[#d1d5db]" type="text"
+        <div class="mt-2">
+            <x-input-label for="role" :value="__('Register as')" />
+            <select name="role" id="role" class="block mt-1 w-full border-2 rounded-lg  border-[#d1d5db]" type="text"
                 :value="old('role')" required autocomplete="username">
-                <option value="" selected disabled ><p class="text-[#d1d5db]">Organizer/attendee</p></option>
+                <option value="" selected disabled  ><p class="text-[#a9bac7]" >Organizer/attendee</p></option>
                 <option value="organizer">Organizer</option>
                 <option value="attendee">Attendee</option>
             </select>
@@ -37,7 +37,7 @@
             <x-input-error :messages="$errors->get('role')" class="mt-2" />
         </div>
         <!-- Password -->
-        <div class="mt-4">
+        <div class="mt-2">
             <x-input-label for="password" :value="__('Password')" />
 
             <x-text-input id="password" class="block mt-1 w-full rounded-lg  border-2" placeholder="insert your password" type="password" name="password" required
@@ -47,7 +47,7 @@
         </div>
 
         <!-- Confirm Password -->
-        <div class="mt-4">
+        <div class="mt-2">
             <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
 
             <x-text-input id="password_confirmation" class="block mt-1 w-full rounded-lg  border-2" placeholder="conferm your password" type="password"
@@ -56,13 +56,13 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
-        <div class="flex items-center justify-end mt-4">
+        <div class="flex items-center justify-end mt-2">
             <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
                 href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
 
-            <x-primary-button class="ms-4">
+            <x-primary-button class="ms-4 border-0">
                 {{ __('Register') }}
             </x-primary-button>
         </div>

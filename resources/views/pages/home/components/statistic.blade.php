@@ -11,7 +11,7 @@
                     <div class="flex flex-col items-center">
                         <h3 class="text-5xl font-extrabold leading-tight text-center text-dark-grey-900"><span
                                 id="countto1" countTo="250"></span>+</h3>
-                        <p class="text-base font-medium leading-7 text-center text-dark-grey-600">Successful Projects
+                        <p class="text-base font-medium leading-7 text-center text-dark-grey-600">Events Sold Out Monthly!
                         </p>
                     </div>
                     <div class="flex flex-col items-center">
@@ -22,7 +22,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <h3 class="text-5xl font-extrabold leading-tight text-center text-dark-grey-900"><span
-                                id="countto3" countTo="2600" data-decimal="1"></span>k+</h3>
+                                id="countto3" countTo="400" ></span>+</h3>
                         <p class="text-base font-medium leading-7 text-center text-dark-grey-600">Global Partners</p>
                     </div>
                     <div class="flex flex-col items-center">
