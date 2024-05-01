@@ -15,12 +15,12 @@
                 I like to share my knowledge and interesting research, to do so I set up a personal blog. We cover several interesting topics and I give some tips and advice to young developers to do better.</p>
         </div>
         <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-            <div class="p-4 md:w-1/3 md:mb-0 mb-6 flex flex-col justify-center items-center max-w-sm mx-auto">
+            <div class="lg:p-4 md:w-1/3 md:mb-0 mb-6 flex flex-col justify-center items-center max-w-sm mx-auto">
                 <div class="bg-gray-300 h-56 w-full rounded-lg shadow-md bg-cover bg-center"
                     style="background-image: url('images/blog-ideas.jpg') ; background-origin:initial">
                 </div>
 
-                <div class=" w-70 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden p-5">
+                <div class=" w-[95%] bg-white -mt-10 shadow-lg rounded-lg overflow-hidden lg:p-5 p-3    ">
 
                     <div class="header-content inline-flex ">
                         <div class="category-badge flex-1  h-4 w-4 m rounded-full m-1 bg-purple-100">
@@ -39,12 +39,12 @@
                 </div>
             </div>
 
-            <div class="p-4 md:w-1/3 md:mb-0 mb-6 flex flex-col justify-center items-center max-w-sm mx-auto">
+            <div class="lg:p-4 md:w-1/3 md:mb-0 mb-6 flex flex-col justify-center items-center max-w-sm mx-auto">
                 <div class="bg-gray-300 h-56 w-full rounded-lg shadow-md bg-cover bg-center"
                     style="background-image: url('images/blog-ExIntrovert.jpeg')">
                 </div>
 
-                <div class=" w-70 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden p-5">
+                <div class=" w-[95%] bg-white -mt-10 shadow-lg rounded-lg overflow-hidden lg:p-5 p-3 ">
 
                     <div class="header-content inline-flex  ">
                         <div class="category-badge flex-1  h-4 w-4 m rounded-full m-1 bg-yellow-100">
@@ -63,19 +63,18 @@
                 </div>
             </div>
 
-            <div class="p-4 md:w-1/3 md:mb-0 mb-6 flex flex-col justify-center items-center max-w-sm mx-auto">
-                <div class="bg-gray-300 h-56 w-full rounded-lg shadow-md bg-cover bg-center"
+            <div class="lg:p-4 md:w-1/3 md:mb-0 mb-6 flex flex-col justify-center items-center max-w-sm mx-auto">
+                <div class=" bg-gray-300 h-56 w-full rounded-lg shadow-md bg-cover bg-center"
                     style="background-image: url('images/blog-Laughter.jpg')">
                 </div>
 
-                <div class=" w-70 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden p-5">
+                <div class=" w-[95%] bg-white -mt-10 shadow-lg rounded-lg overflow-hidden lg:p-5 p-3 ">
 
                     <div class="header-content inline-flex ">
                         <div class="category-badge flex-1  h-4 w-4 m rounded-full m-1 bg-green-100">
                             <div class="h-2 w-2 rounded-full m-1 bg-green-500 "></div>
                         </div>
                         <div class="category-title flex-1 text-sm"> cat3</div> 
-                        {{-- laughter therapy  --}}
                     </div> 
                     <div class="title-post font-bold">Laughter</div>
 
