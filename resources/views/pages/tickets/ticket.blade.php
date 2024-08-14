@@ -3,13 +3,13 @@
     <div class="flex  mt-12 flex-col items-center mb-6">
         {{-- <h3 >welcome {{ Auth::user()->name }} to the event :</h3> --}}
         <h3 class="text-center text-4xl pb-4"> {{ $event->title }}</h3>
-        <div class="lg:h-[60vh] lg:w-[80%] w-[95%] shadow-sm rounded-lg p-2">
-            <div class="h-full flex lg:flex-row flex-col justify-between">
-                <div class="lg:w-[60%] rounded-xl ">
+        <div class=" lg:w-[80%] w-[95%] shadow-sm rounded-lg p-2 h-[fit-content]">
+            <div class="h-full flex lg:flex-row flex-col justify-between ">
+                <div class="lg:w-[60%] rounded-xl lg:h-[65vh] ">
                     <img class="h-[100%] w-full rounded-sm ml-1" src="{{ asset('storage/img/' . $event->image) }}"
                         class="card-img-top" alt="...">
                 </div>
-                <div class=" lg:w-[35%]  rounded-xl  p-4 shadow-sm">
+                <div class=" lg:w-[35%]  rounded-xl  p-4 shadow-sm h-[fit-content]">
                     <div class="flex gap-2 items-center  pt-1 pb-1 text-xl">
                         <div><i class="fa-solid fa-location-dot"></i></div>
                         <p class="m-0 ">{{ $event->location }}</p>

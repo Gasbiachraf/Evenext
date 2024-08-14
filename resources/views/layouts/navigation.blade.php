@@ -91,7 +91,7 @@
                                     <x-dropdown-link class="text-decoration-none mb-1" :href="route('event.index')">
                                         {{ __('Create Event') }}
                                     </x-dropdown-link>
-                                    @if (Auth::user()->role === 'admin' || Auth::user()->role === 'organizer')
+                                    @if (Auth::user()->role === 'admin')
                                         <x-dropdown-link class="text-decoration-none mb-1" :href="route('users.index')">
                                             {{ __('Edit Users') }}
                                         </x-dropdown-link>
@@ -202,7 +202,7 @@
                             <x-dropdown-link class="text-decoration-none mb-1" :href="route('event.index')">
                                 {{ __('Create Event') }}
                             </x-dropdown-link>
-                            @if (Auth::user()->role === 'admin' || Auth::user()->role === 'organizer')
+                            @if (Auth::user()->role === 'admin')
                                 <x-dropdown-link class="text-decoration-none mb-1" :href="route('users.index')">
                                     {{ __('Edit users') }}
                                 </x-dropdown-link>

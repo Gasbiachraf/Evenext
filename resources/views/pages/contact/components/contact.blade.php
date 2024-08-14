@@ -1,7 +1,7 @@
     <!-- component -->
     <!-- format the code its messy  -->
 
-    <div class=" ">
+    <div class="lg:mb-16 ">
         <!-- {/* top container with tagline and backgroundImage  */} -->
         <div class="relative">
             <!-- {/* image section  */} -->

@@ -85,10 +85,13 @@
             </div>
             <h1 class="text-center pt-12 pb-8"> Who are we ?</h1>
             <div>
-                <p class="text-lg pb-4">Tired of the same old event experience? <span class="font-bold">EvenXt</span> is
-                    here
-                    to revolutionize the way you connect with events. We're a cutting-edge platform designed to elevate
-                    your event journey, from discovery to unforgettable memories.
+                <p class="text-lg pb-4">
+                    <span class="font-bold">EvenXt</span> is a powerful event management system designed to streamline the entire process, from
+                    creating events and registering attendees to managing tickets and gaining valuable data. Say goodbye
+                    to the stress of juggling spreadsheets and emails – EvenXt empowers you to focus on what matters
+                    most, creating unforgettable experiences for your event participants.
+
+
                 </p>
                 <h2>Your Event Companion</h2>
                 <p class="text-lg pb-4">

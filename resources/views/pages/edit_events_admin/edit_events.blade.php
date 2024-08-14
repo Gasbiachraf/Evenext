@@ -2,7 +2,7 @@
 @section('content2')
     <section class="container  mx-auto mb-10">
         <div class="flex flex-col items-center">
-            <div class=" -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 w-[85%]">
+            <div class=" -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 w-[100%]">
                 <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                     <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
                         <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 ">

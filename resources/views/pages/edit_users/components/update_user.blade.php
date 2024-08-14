@@ -1,8 +1,11 @@
 <!-- Button trigger modal -->
-<button id="buttonModal{{ $user->id }}" type="button" class="btn btn-primary my-1 px-2 py-1 rounded-lg"
-    data-bs-toggle="modal" data-bs-target="#{{ $user->id }}">
-    Update
-</button>
+<div >
+    <button {{ $user->role == "admin" ? 'disabled' : ""  }} id="buttonModal{{ $user->id }}" type="button" class=" bg-primary text-light  my-1 px-3 py-2 rounded-lg cursor-not-allowed"
+        data-bs-toggle="modal" data-bs-target="#{{ $user->id }}">
+        Update
+    </button>
+
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="{{ $user->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

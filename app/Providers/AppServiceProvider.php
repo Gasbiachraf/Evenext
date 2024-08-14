@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         $numberEvent = 1 ;
+        // $ticketUser = Tickets::where("user_id" , auth()->user->id);
         $users = User::all();
         $events = Events::all();
         // $eventsUser = Events::where("organizer_id" , $userId)->get();
